@@ -1,11 +1,10 @@
-routes = {
-    "13c": ["Talamban", "Gov. M. Cuenco Ave.", "Gaisano Grand Mall (Talamban)", "University of San Carlos (Talamban)", "Banilad", "Banilad Town Center", "Gaisano Country Mall", "University of Cebu (Banilad)", "Paradise Village", "Cebu Country Club", "Samantabhadra Institute", "Arch. Reyes Ave.", "BIR", "Cebu Business Park", "Pag-ibig Fund", "Ayala Center Cebu", "Mindanao Ave.", "Samar Loop", "Luzon Ave.", "Tune Hotels", "Arch. Reyes Ave.", "Hotel Elizabeth", "Gorordo Ave.", "Asilo dela Melagrosa", "Camp Sutero (Cebu City Police office)", "Gen. Echavez St.", "Sikatuna St.", "Parian", "Colon St.", "Gaisano Main", "University of the Visayas", "Colonnade Supermarket", "Colon", "Pelaez St.", "University of San Carlos (Main)", "P. del Rosario St.", "Imus Ave.", "M.J. Cuenco Ave.", "Hipodromo", "Mactan St.", "Cebu Business Park", "Leyte Loop", "Samar Loop", "Lexmark", "Mindanao Ave.", "Ayala Center Cebu", "Arch. Reyes Ave.", "BIR", "Samantabhadra Institute", "Gov. M. Cuenco Ave.", "Banilad", "UC (Banilad)", "Gaisano Country Mall", "Banilad Town Center", "Foodland", "University of San Carlos (Talamban)", "Gaisano Grand Mall (Talamban)", "Talamban"
-    ],
-    "04L": ["Lahug", "JY Square Mall", "Gorordo Ave.", "Corner Sudlon", "Corner Beverly Hills", "Corner Dep-ed (EcoTech)", "Mormons Church (Church of Jesus Christ of Latter-day Saints)", "Lahug Brgy Hall", "University of the Philippines (Cebu)", "Sugbo Cultural Center", "Harolds Hotel", "Tonross Apartelle", "The Golden Peak Hotel", "N. Escario Hotel", "Philhealth", "Kuya J's Restaurant", "Cebu Parklane Hotel", "Grand Cenia Hotel", "Hongkong Plaza Hotel", "Cebu Business Park", "Mindanao Ave.", "Pag-ibig Fund", "Ayala Center Cebu", "Cardinal Rosales Ave.", "Pope John Paul II Ave.", "PLDT", "Carmelite Monastery", "St. Joseph Parish (Mabolo Church)", "SM City Cebu", "SM City Cebu", "Radisson Hotel", "Sergio Osmena Blvd.", "Kaohsiung St.", "Cebu Daily News", "A. Soriano Ave.", "Juan Luna Ave. ext.", "Pope John Paul II Ave.", "Mabolo Church", "Andoks Mabolo", "Carmelite Monastery", "San Carlos Seminary College", "TESDA VII", "Salinas Drive", "Cebu IT Park", "Waterfront Hotel", "Crowne Garden Hotel", "JY Square Mall", "Lahug"
-    ]
-}
+import yaml
 
 
+with open('routes.yaml') as file:
+    routes = yaml.load(file, Loader=yaml.FullLoader)
+
+routes = routes["routes"]
 '''
 test cases that should work
 
@@ -66,7 +65,7 @@ else:
 
 # can the problem be solved using one jeep or two jeeps
 if intersection(valid_starting_jeeps, valid_destination_jeeps):
-    jeeps = intersection(valid_starting_jeeps, valid_destination_jeeps)
+    jeeps = list(set(intersection(valid_starting_jeeps, valid_destination_jeeps)))
     for jeep in jeeps:
         for route in routes:
             if starting_point in routes[route] and destination in routes[route]:
