@@ -108,7 +108,6 @@ routes:
     - Crowne Garden Hotel
     - JY Square Mall
     - Lahug
-routes:
   "12L":
     - Punta Princesa Church
     - Tres de Abril
@@ -139,3 +138,47 @@ routes:
     - Brgy Tisa
     - Punta Princesa
     - Punta Princesa Church
+  "01k":
+    - Urgello St.
+    - Sacred Heart Hospital
+    - South Western University
+    - E. Mall
+    - L. Kilat St.
+    - Colon St. Metro Gaisano (Colon)
+    - Collonade Supermarket
+    - University of the Visayas
+    - Gaisano Main
+    - Brgy. Parian
+    - Zulueta St.
+    - MJ. Cuenco Ave.
+    - NSO
+    - General Maxilom Ave.
+    - A. Soriano Ave.
+    - SM
+    - SM Hypermarket
+    - North Bus Terminal
+    - Cebu Doctors University
+    - CICC Parkmall
+    - MO2
+    - North Bus Terminal
+    - SM Hypermarket
+    - SM City Cebu
+    - White Gold Club
+    - Queen City Memorial Garden
+    - White Gold House
+    - T. Padilla St.
+    - NSO
+    - CITU
+    - V. Gullas St.
+    - Manalili St.
+    - Legaspit St.
+    - Collonade Supermarket
+    - Pelaez St.
+    - Sancianko St.
+    - Sogo Hotel
+    - GV Tower Hotel
+    - E. Mall
+    - Urgello St.
+    - South Western University
+    - Sacred Heart Hospital
+    - Urgello St.
